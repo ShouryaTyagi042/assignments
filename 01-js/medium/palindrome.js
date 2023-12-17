@@ -4,7 +4,10 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  var punctuation = /[\.,?!]/g;
+  var newText = str.replace(punctuation, "").replaceAll(" ", "").toLowerCase();
+  console.log(newText);
+  return newText == newText.split("").reverse().join("");
 }
-
+isPalindrome("Eva, can I see bees in a cave?");
 module.exports = isPalindrome;
