@@ -11,7 +11,15 @@
 */
 
 class Todo {
-
+  tasks = [];
+  add(task) {
+    tasks.push(task);
+  }
+  remove(index) {
+    task = tasks[index];
+    this.tasks.splice(0, 1);
+  }
+  update(index, updatedTodo) {}
 }
 
 module.exports = Todo;
